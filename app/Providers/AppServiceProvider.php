@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Linet\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
