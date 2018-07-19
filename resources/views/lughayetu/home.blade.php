@@ -24,12 +24,12 @@
 			<div class="content_left w3ls">
 				<h3>Linet</h3>
 				<h4>Uh-Ah</h4>
-				<h5>Intelligent Network Operating System</h5>
+				<h5>Network Operating System</h5>
 				<p>Allows for contact management, messaging, application development, E-learning, Internet Searching and much more</p>
 				@guest
 				<div class="back_to_index">
 					
-					<a href="{{ route('register') }}" class="text-capitalize">Authentication</a>
+					<a href="{{ route('register') }}" class="text-capitalize">Authenticate</a>
 					
 					<a href="http://facebook.com/lughayetu" class="text-capitalize">Facebook</a>
 				</div>
@@ -38,8 +38,13 @@
 					
 					<a href="{{ url('/home') }}" class="text-capitalize">Home</a>
 					
-					<a href="{{ route('logout') }}" class="text-capitalize" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">Logout</a>
+					<a href="{{ route('logout') }}" 
+						class="text-capitalize" 
+						onclick="event.preventDefault();
+						       document.getElementById('logout-form').submit();
+					">
+						Logout
+					</a>
 					
 					
 				</div>
@@ -50,8 +55,9 @@
 				<h3>search the internet</h3>
 				<p></p>
 				<div class="b-search w3-form">
-					<form action="#" method="post">
-						<input type="text" name="search" Placeholder="type here" required="">
+					<form action="#" method="get">
+						{{ csrf_field() }}
+						<input type="text" name="q" Placeholder="type here" required="">
 						<input type="submit" value="">
 					</form>
 				</div>
