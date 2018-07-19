@@ -61,6 +61,9 @@
                             </div>
                         </div>
                     </form>
+                    <p>
+                        Dont have an account? <a href="{{ route('register') }}">Register</a>
+                    </p>
                 </div>
             </div>
         </div>
