@@ -11,10 +11,23 @@ class User extends Authenticatable
 
 
     protected $fillable = [
-        'name', 'username' ,'phone', 'email', 'password',
+        'name', 'username' ,'phone', 'email', 'template', 'password',
     ];
 
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    
+    public function install($app){
+    	return false;
+    }
+
+    public function uninstall($app){
+    	return false;
+    }
+
+    public function installStatus($app){
+    	return false;
+    }
 }

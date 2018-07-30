@@ -1,8 +1,8 @@
 <?php
 
 namespace Linet\Http\Controllers;
-
 use Illuminate\Http\Request;
+use Auth;
 
 class LinetController extends Controller
 {
@@ -11,9 +11,12 @@ class LinetController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function home(Request $request)
     {
-        return view('lughayetu.home');
+    	$app = (isset($request->app) ? $request->app : 'none');
+        return view('lughayetu.home',['user' => Auth::user()])
+        		->with('user',Auth::user())
+        		->with('app',$app);
     }
     
 }
