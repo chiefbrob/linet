@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="noindex, nofollow">
 
-    <title>Linet OS</title>
+    <title>Linet</title>
     
 </head>
 <body 
