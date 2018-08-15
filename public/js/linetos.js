@@ -170,9 +170,10 @@ $().ready(function(){
 
 					return true;	},
 				shutdown: function(){
-					_appApi(this.username,'shutdown',false);
+					//_appApi(this.username,'shutdown',false);
 					_unmountHtml(this.username);
 					_removeStyle(this.username);
+					//stop script
 					return true;				},
 				getStatus: function(){
 
@@ -312,7 +313,9 @@ $().ready(function(){
 	function _firstApp(){
 
 		return $('body').attr('firstApp');	}
-
+	function _appIcon(username){
+		return username;
+	}
 
 
 

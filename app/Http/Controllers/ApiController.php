@@ -7,17 +7,18 @@ use Linet\Bot;
 use Linet\Template;
 use Linet\Application;
 use Auth;
+use Linet\Notification;
 
 class ApiController extends Controller
 {
-    public function getstyle($name)
-    {
+    public function getstyle($name){
     	$css = Bot::getFileContents($name);
     	return response($css,200)->header('Content-Type','text/css');
     }
 
     public function getscript($name)
     {
+
     	return Bot::getFileContents($name);
     }
 
@@ -50,9 +51,74 @@ class ApiController extends Controller
     			return $retVal;
 
     			break;
+
+            case 'user-data':
+
+                $retVal = array(
+                    'LINET000',
+                    Auth::user()->apps,
+                    $user->notifications,
+                );
+                return $retVal;
+                break;
+
+            case 'mtengenezi-loadApp':
+
+                $app = Application::where('username',$request->username)->first();
+
+                $retVal = array();
+                $retVal[0] = $app;
+                $retVal[1] = Bot::getFileContents($app->username . '.html');
+                $retVal[2] = Bot::getFileContents($app->username . '.js');
+                $retVal[3] = Bot::getFileContents($app->username . '.css');
+
+                return $retVal;
+
+                break;
+
+            case 'mtengenezi-commitApp':
+
+                $app = Application::where('username',$request->username)->first();
+
+                if(!$app || $app->owner !== Auth::user()->id)
+                    return 'LINET500';
+
+
+                Bot::putFileContents($app->username.'.js',$request->script);
+                Bot::putFileContents($app->username.'.css',$request->style);
+                Bot::putFileContents($app->username.'.html',$request->data);
+
+                return 'LINET000';
+
+                break;
     		
+            case 'applications':
+                $user = Auth::user();
+                $retVal = array();
+
+                $retVal['all'] = Application::all(); 
+                $retVal['installed'] = $user->apps;
+                return $retVal;               
+                break;
+
+            case 'install-application':
+                $app = Application::where('username',$request->username)->first();
+                if(Auth::user()->installApp($app))
+                    return ['LINET000',$app];
+                else
+                    return 'LINET500';
+
+            case 'uninstall-application':
+                $app = Application::where('username',$request->username)->first();
+                
+                if(Auth::user()->uninstallApp($app))
+                    return ['LINET000',$app];
+                else
+                    return 'LINET500';
+                break;
+
     		default:
-    			dd("LINET500"); //internal server error
+    			return "LINET500"; //internal server error
     			break;
     	}
     }

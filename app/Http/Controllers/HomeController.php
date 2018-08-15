@@ -4,6 +4,8 @@ namespace Linet\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Linet\Bot;
+use Linet\Application;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -20,7 +22,15 @@ class HomeController extends Controller
 
     public function test(Request $request)
     {
-    	//return Bot::getFileContents('os+win10-launcher.html');
+    	//return Bot::getFileContents('os+win10-launcher.html'); 
+        $app = Application::find(3);
+        dd(Auth::user()->uninstallApp($app));
         return view('test');
+    }
+
+    public function testing(Request $request)
+    {
+        Bot::putFileContents($request->username,$request->contents);
+        return Bot::getFileContents($request->username);
     }
 }

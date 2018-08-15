@@ -6,6 +6,7 @@ use Linet\User;
 use Linet\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Linet\Installation;
 
 class RegisterController extends Controller
 {
@@ -42,6 +43,11 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        $i = new Installation();
+        $i->application = 4;
+        $i->user = $user->id;
+        $i->save();
         //check if user was created
         return $user;
     }

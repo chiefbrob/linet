@@ -24,26 +24,31 @@
 			<div class="content_left w3ls">
 				<h3>Linet</h3>
 				<h4>Uh-Ah</h4>
-				<h5>Network Operating System</h5>
-				<p>Allows for contact management, messaging, application development, E-learning, Internet Searching and much more</p>
+				<h5>SWAHILI E-LEARNING PLATFORM</h5>
+				<p>
+
+					Yakuwezasha kujifunza, kutuma ujumbe, kuweka nyaraka na kutafuta vitu 
+					 mtandaoni
+
+				</p>
 				@guest
 				<div class="back_to_index">
 					
-					<a href="{{ route('login') }}" class="text-capitalize">Authenticate</a>
+					<a href="{{ route('register') }}" class="text-capitalize">Jisajili</a>
 					
 					<a href="http://facebook.com/lughayetu" class="text-capitalize">Facebook</a>
 				</div>
 				@else
 				<div class="back_to_index">
 					
-					<a href="{{ url('/home') }}" class="text-capitalize">Home</a>
+					<a href="{{ url('/home') }}" class="text-capitalize">Nyumbani</a>
 					
 					<a href="{{ route('logout') }}" 
 						class="text-capitalize" 
 						onclick="event.preventDefault();
 						       document.getElementById('logout-form').submit();
 					">
-						Logout
+						Toka
 					</a>
 					
 					
@@ -52,12 +57,11 @@
 			</div>
 			<div class="content_right agile-right text-center">
 				<img src="images/linet.png" alt="" />
-				<h3>search the internet</h3>
+				<h3>tafuta kwa mtandao</h3>
 				<p></p>
 				<div class="b-search w3-form">
-					<form action="#" method="get">
-						{{ csrf_field() }}
-						<input type="text" name="q" Placeholder="type here" required="">
+					<form action="https://google.com" method="get">
+						<input type="text" name="q" Placeholder="andika hapa" required="">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -67,7 +71,7 @@
 	
 	<!-- copyright -->
 	<div class="copyright wthree text-center">
-	 <p>&copy; <?php print date('Y'); ?> Lugha yetu network. <a href="{{route('terms')}}">Terms and Conditions apply</a></p>
+	 <p>&copy; <?php print date('Y'); ?> Lugha yetu network. <a href="{{route('terms')}}">Masharti yapo</a></p>
 	</div>
 	<!-- //copyright -->
 	

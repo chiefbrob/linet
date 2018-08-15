@@ -5,9 +5,8 @@
     <script type="text/javascript" src="{{ url('/js/jquery.min.js') }}"></script>
 </head>
 <body>
-    <form method="post" action="/applications" id="appData">
+    <form method="post" action="/api/uninstall-application" id="appData">
         {{ csrf_field() }}
-        <input type="text" name="task" value="install">
         <input type="text" name="username" value="mtengenezi">
         
     </form>
@@ -21,3 +20,4 @@
 </body>
 
 </html>
+

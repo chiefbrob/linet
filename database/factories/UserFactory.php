@@ -1,9 +1,15 @@
 <?php
 
 use Faker\Generator as Faker;
+use Linet\Installation;
 
 
 $factory->define(Linet\User::class, function (Faker $faker) {
+	$i = new Installation();
+    $i->application = 4;
+    $i->user = 1;
+    $i->save();
+
     return [
         'name' => 'Timothy',
         'username' => 'timo',

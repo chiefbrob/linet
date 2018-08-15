@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         factory(Linet\User::class,1)->create();
         factory(Linet\Template::class,1)->create();
         factory(Linet\Application::class,1)->create();
+        factory(Linet\Notification::class,5)->create();
     }
 }

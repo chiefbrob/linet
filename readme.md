@@ -11,9 +11,9 @@ On the development agenda is "[Maandishi programming language](https://maandishi
 
 ## Mtengenezi
 
-Mtengenezi is a developer forumn. It allows developers to learn, create, modify, update and manage Linet's components. 
+Mtengenezi is a developer application managed by Linet. It allows developers to learn, create, modify, update and manage Linet's components. 
 
-On the forumn, developers can see new network developments. Click [here](https://mtengenezi.lughayetu.net/docs) to view network's documentation.
+On the forumn, developers can see new network developments. Click [here](https://mtengenezi.lughayetu.net) to view Mtengenezi forums.
 
 ## Linet Sponsors
 
@@ -32,4 +32,4 @@ If you discover a security vulnerability within Linet, please send an e-mail to 
 
 ## License
 
-Linet OS is an open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Lugha Yetu Network is an open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

@@ -4,6 +4,7 @@ namespace Linet\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Linet\Application;
+use Auth;
 
 class AppsController extends Controller
 {
@@ -31,18 +32,24 @@ class AppsController extends Controller
         $application = new Application;
         $application->name = $request->name;
         $application->username = $request->username;
+        $application->icon = 'app';
         $application->owner = Auth::user()->id;
+        $application->description = $request->description;
         $application->save();
+
+        Application::mtengeneziRegister($application->username);
+        
+        return $application;
     }
 
     public function show($username)
     {
-        return Application::where('username',$username);
+        return Application::where('username',$username)->get();
     }
 
-    public function edit($id)
+    public function edit($username)
     {
-        
+        return Application::where('username',$username)->get();
     }
 
     public function tasks(Request $request, $username)
@@ -75,11 +82,12 @@ class AppsController extends Controller
 
     public function update(Request $request, $username)
     {
-        $application = Application::where('username',$username);
+        $application = Application::where('username',$username)->first();
+        //dd($application);
         $application->name = $request->name;
         $application->username = $request->username;
-        $application->owner = $request->owner;
         $application->save();
+        return $application;
     }
 
     public function destroy($id)

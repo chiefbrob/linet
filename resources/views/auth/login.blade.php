@@ -5,17 +5,17 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
+                <div class="panel-heading">Karibu tena</div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                            <label for="username" class="col-md-4 control-label">Username</label>
+                            <label for="username" class="col-md-4 control-label">Jina la mtandao</label>
 
                             <div class="col-md-6">
-                                <input id="username" type="text" class="form-control" name="username" value="{{ old('username') }}" required autofocus="autofocus" maxlength="20">
+                                <input id="username" type="text" class="form-control" name="username" value="{{ old('username') }}" placeholder="username" required autofocus="autofocus" maxlength="20">
 
                                 @if ($errors->has('username'))
                                     <span class="help-block">
@@ -43,7 +43,7 @@
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Nikumbuke
                                     </label>
                                 </div>
                             </div>
@@ -52,17 +52,17 @@
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Login
+                                    Ingia
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
+                                    Umesahau Password?
                                 </a>
                             </div>
                         </div>
                     </form>
                     <p>
-                        Dont have an account? <a href="{{ route('register') }}">Register</a>
+                        Je huna accounti? <a href="{{ route('register') }}">Jiunge nasi</a>
                     </p>
                 </div>
             </div>

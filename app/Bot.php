@@ -75,4 +75,10 @@ class Bot extends Model
     	return Storage::disk('local')->get($location);
     }
 
+    public static function putFileContents($name,$contents)
+    {
+        $location = Bot::getFileLocation($name);
+        return Storage::disk('local')->put($location, $contents);
+    }
+
 }
