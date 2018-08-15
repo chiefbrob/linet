@@ -39,11 +39,11 @@ class Bot extends Model
 
     			$fileName = explode(".", $newName[1]);
     			if($extension == "html")
-    				return "linet/$fileName[0]/$fileName[0]".".html";
+    				return "public/$fileName[0]/$fileName[0]".".html";
     			if($extension == "js")
-    				return "linet/$fileName[0]/js/$fileName[0]".".js";
+    				return "public/$fileName[0]/js/$fileName[0]".".js";
     			if($extension == "css")
-    				return "linet/$fileName[0]/css/$fileName[0]".".css";
+    				return "public/$fileName[0]/css/$fileName[0]".".css";
     		}
     		else
     		{
@@ -55,9 +55,9 @@ class Bot extends Model
 
 
     			if($extension == "html")
-    				return "linet/$folderName[0]/$fileName[0]".".html";
+    				return "public/$folderName[0]/$fileName[0]".".html";
     			if($extension == "css")
-    				return "linet/$folderName[0]/css/$fileName[0]".".css";
+    				return "public/$folderName[0]/css/$fileName[0]".".css";
     		}
     		return false;
     	}
@@ -65,7 +65,7 @@ class Bot extends Model
     	{
     		//getting an application file
     		$fileName = explode(".", $name);
-    		return "apps/mtengenezi/files/$fileName[0]/$name";
+    		return "public/apps/$fileName[0]/$name";
     	}
     }
 
