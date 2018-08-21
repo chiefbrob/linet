@@ -3,7 +3,7 @@
 namespace Linet;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
+use Linet\Bot;
 
 class Application extends Model
 {
@@ -19,8 +19,8 @@ class Application extends Model
     	if(!$app)
     		return false;
 
-    	$path = "apps/mtengenezi/files/$username";
-    	Storage::makeDirectory($path);
+    	$path = "public/apps/$username";
+    	Bot::makeDirectory($path);
 
     	$script = "
 /* @$username */ 
@@ -57,9 +57,9 @@ console.log('@$username script running');
 </div>
 ";
 
-    	Storage::put($path."/$username.js",$script);
-    	Storage::put($path."/$username.css",$style);
-    	Storage::put($path."/$username.html",$data);
+    	Bot::saveToFile($path."/$username.js",$script);
+    	Bot::saveToFile($path."/$username.css",$style);
+    	Bot::saveToFile($path."/$username.html",$data);
 
     	return true;
     }

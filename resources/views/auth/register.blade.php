@@ -89,20 +89,24 @@
                             </div>
                         </div>
 
+                        <p>
+                            Kwa kujisajili, unakubaliana na  <a href="{{ route('terms') }}">masharti </a> yetu
+                        </p>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Register
+                                    Jisajili
                                 </button>
 
                                 <button type="reset" class="btn btn-danger">
-                                    Reset
+                                    Futa kila kitu
                                 </button>
                             </div>
                         </div>
                     </form>
                     <p>
-                        Je una accounti? <a href="{{ route('login') }}">Karibu tena</a>
+                        Je una accounti? <a href="{{ route('login') }}">Jitambulishe hapa</a>
                     </p>
                 </div>
             </div>

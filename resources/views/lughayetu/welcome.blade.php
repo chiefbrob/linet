@@ -60,7 +60,7 @@
 				<h3>tafuta kwa mtandao</h3>
 				<p></p>
 				<div class="b-search w3-form">
-					<form action="https://google.com" method="get">
+					<form action="https://duckduckgo.com" method="get">
 						<input type="text" name="q" Placeholder="andika hapa" required="">
 						<input type="submit" value="">
 					</form>

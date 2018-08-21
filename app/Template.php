@@ -3,7 +3,6 @@
 namespace Linet;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 
 class Template extends Model
 {

@@ -4,14 +4,15 @@ namespace Linet;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Linet\Traits\Friendable;
 use Linet\Notification;
 use Linet\Application;
 use Linet\Installation;
-use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    use Friendable;
 
 
     protected $fillable = [

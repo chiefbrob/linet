@@ -61,6 +61,9 @@ class ApiController extends Controller
                 );
                 return $retVal;
                 break;
+            case 'mtengenezi-myApps':
+                return Application::where('owner',Auth::user()->id)->get();
+                break;
 
             case 'mtengenezi-loadApp':
 
