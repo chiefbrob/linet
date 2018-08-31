@@ -23,3 +23,7 @@ Route::post('/api/{endPoint}', 'ApiController@api')->name('api');
 Route::resource('/applications','AppsController');
 Route::resource('/notifications','NotificationsController');
 
+Route::post('/wenzangu/{api}', 'FriendsController@api')->name('friends');
+//Route::get('/wenzangu/{api}', 'FriendsController@api')->name('friends');
+
+Route::resource('/ujumbe', 'MessageController');

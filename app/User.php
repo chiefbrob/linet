@@ -4,16 +4,17 @@ namespace Linet;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Linet\Traits\Friendable;
 use Linet\Notification;
 use Linet\Application;
 use Linet\Installation;
+use Linet\Traits\Friendable;
+use Linet\Traits\Messageable;
 
 class User extends Authenticatable
 {
     use Notifiable;
     use Friendable;
-
+    use Messageable;
 
     protected $fillable = [
         'name', 'username' ,'phone', 'email', 'template', 'password',

@@ -15,11 +15,11 @@ class CreateApplicationsTable extends Migration
     {
         Schema::create('applications', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username')->unique();
-            $table->string('icon');
-            $table->string('name');
-            $table->integer('owner');
-            $table->string('description');
+            $table->string('username',50)->unique();
+            $table->string('icon',50);
+            $table->string('name',50);
+            $table->decimal('owner',10);
+            $table->string('description',500);
             $table->timestamps();
         });
 
@@ -33,6 +33,5 @@ class CreateApplicationsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('applications');
-        Schema::dropIfExists('installations');
     }
 }

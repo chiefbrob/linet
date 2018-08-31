@@ -33,7 +33,7 @@ $().ready(function(){
 		sync: function(){
 			//upload unsaved data
 			//LINET004 - SYNC FAILED
-			console.log('Data save success');		},
+			console.log('LINET: Data save success');		},
 		getStatus: function(){
 
 			return this.status;		},
@@ -57,7 +57,7 @@ $().ready(function(){
 			switch(action){
 
 				case "mount":
-					//console.log('mounting ' + username);
+					//console.log('LINET: mounting ' + username);
 					this.mountHtml('os+' + username);
 
 					if(parameters)
@@ -74,7 +74,7 @@ $().ready(function(){
 					break;
 				case "applyStyle":
 
-					//console.log('applying style ' + username);
+					//console.log('LINET: applying style ' + username);
 					this.applyStyle('os+'+username);
 
 					break;
@@ -91,7 +91,7 @@ $().ready(function(){
 		mountHtml: function(username){
 
 			var component = username + '.html';
-			//console.log('mounting html >> ' + component);
+			//console.log('LINET: mounting html >> ' + component);
 
 
 			$.ajax({
@@ -99,21 +99,21 @@ $().ready(function(){
 				url: 'system/' + component,
 				data: {_token: _getToken(), username: username },
 				success: function(component) {
-					//console.log(username + '.html mounted');
+					//console.log('LINET: ' + username + '.html mounted');
 					$('body').append(component);
 					
 				},
 				error: function() {
 					
-					console.log('Failed to mount component');
+					console.log('LINET: Failed to mount component');
 				},
 			});		},
 		unmountHtml: function(username){
-			//console.log('unmounting html >> ' + component + '.html');
+			//console.log('LINET: unmounting html >> ' + component + '.html');
 			$('#'+username).remove();		},
 		loadScript: function(name){
 
-			//console.log('loading script >> ' + name + '.js');
+			//console.log('LINET: loading script >> ' + name + '.js');
 
 			$.ajax({
 				type: 'POST',
@@ -125,7 +125,7 @@ $().ready(function(){
 				},
 				error: function() {
 					
-					console.log('failed to fetch and execute script');
+					console.log('LINET: failed to fetch and execute script');
 				},
 			});		},
 		interpret: function(code){
@@ -133,7 +133,7 @@ $().ready(function(){
 			eval(code);		},
 		applyStyle: function(name){
 
-			//console.log('applying style >> ' + name + '.css');
+			//console.log('LINET: applying style >> ' + name + '.css');
 
 			$("<link/>", {
 				id: name + '-style',
@@ -142,7 +142,7 @@ $().ready(function(){
 				href: "style/" + name + '.css',
 			}).appendTo("head");		},
 		removeStyle: function(name){
-			//console.log('removing style >> ' + name + '.css');
+			//console.log('LINET: removing style >> ' + name + '.css');
 
 			$('#' + name+'-style').remove();		},
 
@@ -155,7 +155,7 @@ $().ready(function(){
 
 				boot: function(focus){
 
-					console.log('@' + username + ' booting');
+					console.log('LINET: @' + username + ' booting');
 
 					//_initialize(this.username);
 					_mountHtml(this.username);
@@ -181,41 +181,14 @@ $().ready(function(){
 
 			};	},
 		installApp: function(username){
-			$.ajax({
-				type: 'POST',
-				url: 'api/application-install',
-				data: {_token: _getToken(), username: username },
-				success: function(response) {
 
-					console.log(response);
-
-				},
-				error: function() {
-					
-					console.log('applications api failed');
-				},
-			});		},
+			return this.os.installApp(username);	},
 		appStatus: function(username){
 
 			return this.os.appApi(username,'status',false);		},
 		uninstallApp: function(username){
 
-			this.os.stopApp(username);
-
-			$.ajax({
-				type: 'POST',
-				url: 'api/application-uninstall',
-				data: {_token: _getToken(), username: username },
-				success: function(response) {
-
-					console.log(response);
-
-				},
-				error: function() {
-					
-					console.log('applications api failed');
-				},
-			});		},
+			return this.os.uninstallApp(username);	},
 		runApp: function(username){
 
 			this.os.runApp(username);		},
@@ -314,11 +287,14 @@ $().ready(function(){
 
 		return $('body').attr('firstApp');	}
 	function _appIcon(username){
-		return username;
+		
+		return username;}
+
+
+//USER 
+	function username(){
+		return _linet.username;
 	}
-
-
-
 
 
 

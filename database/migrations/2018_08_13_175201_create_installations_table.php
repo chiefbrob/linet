@@ -17,7 +17,7 @@ class CreateInstallationsTable extends Migration
             $table->increments('id');
             $table->integer('application');
             $table->integer('user');
-            $table->string('status')->default('installed');
+            $table->string('status',50)->default('installed');
             $table->timestamps();
         });
     }

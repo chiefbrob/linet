@@ -15,11 +15,11 @@ class CreateNotificationsTable extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('category')->default('taarifa');
-            $table->string('contents');
-            $table->string('sender');
-            $table->integer('user');
-            $table->string('status')->default('received');
+            $table->string('category',50)->default('taarifa');
+            $table->string('contents',500);
+            $table->string('sender',50);
+            $table->decimal('user',10);
+            $table->string('status',50)->default('received');
             $table->timestamps();
         });
     }

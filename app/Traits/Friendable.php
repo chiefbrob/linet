@@ -172,6 +172,7 @@ trait Friendable
         $pending = $this->pendingFriendRequests();
         $sent = $this->sentFriendRequests();
         return array(
+        	'me' => $this,
         	'friends' => $friends,
         	'pending' => $pending,
         	'sent' => $sent);
