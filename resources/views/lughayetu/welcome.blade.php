@@ -27,8 +27,8 @@
 				<h5>SWAHILI E-LEARNING PLATFORM</h5>
 				<p>
 
-					Yakuwezasha kujifunza, kutuma ujumbe, kuweka nyaraka na kutafuta vitu 
-					 mtandaoni
+					Yakuwezasha kujifunza, kutuma na kupokea ujumbe, kuweka nyaraka, kutafuta vitu 
+					 mtandaoni na mengine mengi.
 
 				</p>
 				@guest

@@ -27,3 +27,4 @@ Route::post('/wenzangu/{api}', 'FriendsController@api')->name('friends');
 //Route::get('/wenzangu/{api}', 'FriendsController@api')->name('friends');
 
 Route::resource('/ujumbe', 'MessageController');
+Route::get('/ujumbe/chats/{username}', 'MessageController@chats')->name('chats');

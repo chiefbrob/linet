@@ -21,6 +21,9 @@
         {{ csrf_field() }}
     </form>
 	
+    <noscript>
+        JavaScript is required!
+    </noscript>
     
     
     
