@@ -82,8 +82,8 @@ class Bot extends Model
         //return Storage::disk('local')->put($location, $contents);
     }
 
-    public static function saveToFile($name,$contents){
-        return Storage::disk('local')->put($name, $contents);
+    public static function saveToFile($path,$contents){
+        return Storage::disk('local')->put($path, $contents);
     }
 
     public static function makeDirectory($path)

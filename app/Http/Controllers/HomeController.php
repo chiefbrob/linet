@@ -4,33 +4,23 @@ namespace Linet\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Linet\Bot;
-use Linet\Application;
-use Auth;
 
 class HomeController extends Controller
 {
-
-    public function index()
-    {
-        return view('home');
-    }
 
     public function terms()
     {
         return view('lughayetu.terms');
     }
 
-    public function test(Request $request)
-    {
-    	//return Bot::getFileContents('os+win10-launcher.html'); 
-        $app = Application::find(3);
-        dd(Auth::user()->uninstallApp($app));
-        return view('test');
+    public function getstyle($name){
+    	$css = Bot::getFileContents($name);
+    	return response($css,200)->header('Content-Type','text/css');
     }
 
-    public function testing(Request $request)
+    public function getscript($name)
     {
-        Bot::putFileContents($request->username,$request->contents);
-        return Bot::getFileContents($request->username);
+
+    	return Bot::getFileContents($name);
     }
 }

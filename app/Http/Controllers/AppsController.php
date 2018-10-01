@@ -73,7 +73,7 @@ class AppsController extends Controller
                 break;
             
             default:
-                # code...
+                return "LINET006";
                 break;
         }
 
@@ -83,7 +83,6 @@ class AppsController extends Controller
     public function update(Request $request, $username)
     {
         $application = Application::where('username',$username)->first();
-        //dd($application);
         $application->name = $request->name;
         $application->username = $request->username;
         $application->save();

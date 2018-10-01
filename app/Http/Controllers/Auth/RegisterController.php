@@ -44,11 +44,33 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
 
-        $i = new Installation();
-        $i->application = 4;
-        $i->user = $user->id;
-        $i->save();
-        //check if user was created
+        Installation::create([
+            'application' => 2,
+            'user' => $user->id,
+        ]);
+
+        Installation::create([
+            'application' => 3,
+            'user' => $user->id,
+        ]);
+
+        Installation::create([
+            'application' => 4,
+            'user' => $user->id,
+        ]);
+
+        Installation::create([
+            'application' => 5,
+            'user' => $user->id,
+        ]);
+
+        Installation::create([
+            'application' => 6,
+            'user' => $user->id,
+        ]);        
+        
+
+
         return $user;
     }
 }

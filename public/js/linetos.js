@@ -160,20 +160,15 @@ $().ready(function(){
 					//_initialize(this.username);
 					_mountHtml(this.username);
 					_applyStyle(this.username);
+					//setTimeout(_loadScript,1000,this.username);
 					_loadScript(this.username);
 
-					return _appApi(this.username,'run',focus);
-					//_appApi(this.username,'status-update','running');
-
-					if(focus)
-						return _appApi(this.username,'focus',false);
-
-					return true;	},
+					return _appApi(this.username,'run',focus); },
 				shutdown: function(){
 					//_appApi(this.username,'shutdown',false);
 					_unmountHtml(this.username);
 					_removeStyle(this.username);
-					//stop script
+					//_interpret(this.username + 'Close();');
 					return true;				},
 				getStatus: function(){
 

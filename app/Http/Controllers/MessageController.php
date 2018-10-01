@@ -31,13 +31,15 @@ class MessageController extends Controller
     {
         //saves a message
 
-        $message = Message::create([
-            'sender' => Auth::user()->id,
-            'target' => User::where('username',$request->username)->first()->id,
-            'contents' => $request->contents,
-        ]);
+        $target = User::where('username',$request->username)->first();
 
-        if($message)
+        $m = new Message;
+        $m->sender = Auth::user()->id;
+        $m->target = $target->id;
+        $m->contents = $request->contents;
+        $m->save();
+
+        if($m)
             return "LINET000";
         else
             return "LINET001";
@@ -82,6 +84,10 @@ class MessageController extends Controller
 
     public function chats($username){
         $user = User::where('username',$username)->first();
-        return Auth::user()->chatsMessages($user);
+        return array([$user,Auth::user()], Auth::user()->chatsMessages($user));
+    }
+
+    public function conversations(){
+        return Auth::user()->conversations();
     }
 }

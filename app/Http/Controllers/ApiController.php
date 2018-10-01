@@ -11,15 +11,9 @@ use Linet\Notification;
 
 class ApiController extends Controller
 {
-    public function getstyle($name){
-    	$css = Bot::getFileContents($name);
-    	return response($css,200)->header('Content-Type','text/css');
-    }
-
-    public function getscript($name)
+    public function __construct()
     {
-
-    	return Bot::getFileContents($name);
+        $this->middleware('auth');
     }
 
     public function api(Request $request, $endPoint)

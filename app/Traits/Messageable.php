@@ -72,6 +72,27 @@ trait Messageable
         	return false;
 	}
 
+	public function conversations(){
+		$results = DB::select("SELECT sender, target FROM messages WHERE sender = ".$this->id." OR target = ".$this->id." ORDER BY created_at DESC");
+
+		$users = array();
+
+		foreach ($results as $result) {
+			$k = false;
+			$focus = ($result->sender == $this->id ? $result->target : $result->sender);
+			foreach($users as $user)
+			{
+				if($user->id == $focus)
+					$k = true;
+			}
+
+			if(!$k)
+				array_push($users, User::findOrFail($focus));
+		}
+
+		return $users;
+	}
+
 
 }
 

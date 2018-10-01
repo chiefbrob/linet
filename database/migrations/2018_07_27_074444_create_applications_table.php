@@ -18,7 +18,7 @@ class CreateApplicationsTable extends Migration
             $table->string('username',50)->unique();
             $table->string('icon',50);
             $table->string('name',50);
-            $table->decimal('owner',10);
+            $table->integer('owner');
             $table->string('description',500);
             $table->timestamps();
         });

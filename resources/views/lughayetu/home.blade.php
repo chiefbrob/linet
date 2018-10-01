@@ -27,14 +27,7 @@
     
     
     
-    
-    
-    
-    
-    
-    
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/linetos.js"></script>
-    <!--<script type="text/javascript" src="js/linetos-api.js"></script>-->
 </body>
 </html>

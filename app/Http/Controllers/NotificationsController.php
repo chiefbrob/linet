@@ -9,6 +9,11 @@ use Auth;
 
 class NotificationsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         return Notification::where('user',Auth::user()->id)->get();

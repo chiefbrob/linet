@@ -18,7 +18,7 @@ class CreateNotificationsTable extends Migration
             $table->string('category',50)->default('taarifa');
             $table->string('contents',500);
             $table->string('sender',50);
-            $table->decimal('user',10);
+            $table->integer('user');
             $table->string('status',50)->default('received');
             $table->timestamps();
         });
