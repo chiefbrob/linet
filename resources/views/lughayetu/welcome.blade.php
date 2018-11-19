@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta name="keywords" content="Lugha yetu network, Linet" />
-	<meta name="robots" content="noindex, nofollow">
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 	<link href="//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900" rel="stylesheet">
 
