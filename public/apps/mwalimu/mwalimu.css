@@ -1,17 +1,19 @@
 /* Mwalimu style */
 #mwalimu {
-	
+	overflow-y: scroll;
 }
 
 	#mwalimu .application-body .mwalimu-welcome {
 		height: 23em;
-
 	}
+		.mwalimu-view {
+			width: 45%;
+			margin: 0.5em 2.4%;
+			float: left;
+		}
 
 		.mwalimu-welcome .mwalimu-intro {
-			float: left;
-			width: 45%;
-			padding: 0.5em 2.4%;
+
 
 		}
 
@@ -25,9 +27,6 @@
 		.mwalimu-welcome .mwalimu-madarasa {
 			overflow-y: auto;
 			height: 100%;
-			float: right;
-			width: 45%;
-			padding: 0.5em 2.4%;
 		}
 
 			.mwalimu-madarasa .mwalimu-darasa {
@@ -57,3 +56,14 @@
 		.mwalimu-darasani h5 {
 			
 		}
+
+@media only screen and (max-width: 750px) {
+
+}
+
+@media only screen and (max-width: 400px) {
+	.mwalimu-view {
+		width: 95%;
+		margin: 0.5em 2.4%;
+	}
+}

@@ -74,23 +74,23 @@ class Bot extends Model
 
     	$location = Bot::getFileLocation($name);
         return file_get_contents($location);
-    	return Storage::disk('local')->get($location);
     }
 
     public static function putFileContents($name,$contents)
     {
         $location = Bot::getFileLocation($name);
-        return file_put_contents($location, $contents);
         return Bot::saveToFile($location,$contents);
         //return Storage::disk('local')->put($location, $contents);
     }
 
     public static function saveToFile($path,$contents){
+        return file_put_contents($location, $contents);
         return Storage::disk('local')->put($path, $contents);
     }
 
     public static function makeDirectory($path)
     {
+        return mkdir($path);
         Storage::makeDirectory($path);
     }
 
