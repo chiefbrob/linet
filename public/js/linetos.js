@@ -139,7 +139,7 @@ $().ready(function(){
 				id: name + '-style',
 				rel: "stylesheet",
 				type: "text/css",
-				href: "style/" + name + '.css',
+				href: "style/" + name + '.css/',
 			}).appendTo("head");		},
 		removeStyle: function(name){
 			//console.log('LINET: removing style >> ' + name + '.css');
