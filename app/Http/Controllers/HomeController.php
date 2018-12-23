@@ -20,7 +20,6 @@ class HomeController extends Controller
 
     public function getscript($name)
     {
-        return 0;
     	return Bot::getFileContents($name);
     }
 }

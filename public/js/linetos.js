@@ -117,7 +117,7 @@ $().ready(function(){
 
 			$.ajax({
 				type: 'POST',
-				url: 'system/' + name + '.js',
+				url: 'system/' + name + '.js/',
 				data: {_token: _getToken(), },
 				success: function(script) {
 
