@@ -1,0 +1,43 @@
+/* win10 taskbar*/
+
+#win10-taskbar {
+	position: fixed;
+	bottom: 0;
+	background-color: white;;
+	width:100%;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+	height: 2em;
+	z-index: 500;
+	opacity: 0.8;
+}
+
+#win10-taskbar .left-section {
+	text-align: left;
+	width: auto;
+	float: left;
+	border-right: 0.1em solid #8B7D6B;
+}
+#win10-taskbar .middle-section {
+	
+}
+
+#win10-taskbar .right-section {
+	text-align: right;
+	float: right;
+}
+
+#win10-taskbar div .icon {
+	width: 1.8em;
+	height: 1.8em;
+	border-radius: 5%;
+	float: left;
+	text-align: center;
+	margin: 0.1em;
+	opacity: 0.8;
+}
+
+#win10-taskbar div .icon:hover {
+	opacity: 1.0;
+}

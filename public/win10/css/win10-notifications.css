@@ -1,0 +1,79 @@
+/* win10 notifications */
+
+#win10-notifications {
+	position:fixed;
+	right:0;
+	bottom: 2.5em;
+	width: 30em;
+	background-color: #0CF;
+	z-index: 499;
+	height: 34em;
+	border-radius: 5% 0 0 0;
+	font-size: 80%;
+}
+
+	#win10-notifications p.notifications-heading {
+		padding:0;
+		margin:0;
+		text-align: center;
+		border-bottom: 0.1em solid white;
+		font-size: 110%;
+		font-family:"Arial Black", Gadget, sans-serif;
+		overflow: hidden;
+		width: 90%;
+		position: relative;
+		left: 5%;
+	}
+	
+	#win10-notifications .notifications-container {
+		width: 28em;
+		padding: 1em;
+		overflow-y: auto;
+	}
+		#win10-notifications .notifications-container .notification {
+			margin: 0.5em 0;
+			padding: 0.2em 0;
+			overflow: hidden;
+			border-bottom: 0.1em solid black;
+		}
+		
+		#win10-notifications .notifications-container .slideshow img {
+			float: left;
+		}
+		
+		#win10-notifications .notifications-container .slideshow h4.title {
+			padding: 0;
+			margin: 0.5em 0;
+		}
+		
+		#win10-notifications .notifications-container .ujumbe textarea {
+			border: none;
+			padding: 0.2em 0.5em;
+			resize: horizontal;
+			clear:both;
+		}
+		
+		#win10-notifications .notifications-container .taarifa span:hover {
+			text-decoration: underline;
+			cursor:default;
+		}
+
+
+@media only screen and (max-width: 750px) {
+	#win10-notifications {
+		bottom: 2em;
+		width: 50%;
+		z-index: 499;
+		height: 30em;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	#win10-notifications {
+		position:fixed;
+		right:0;
+		bottom: 2.5em;
+		width: 100%;
+		height: 90%;
+	}
+}

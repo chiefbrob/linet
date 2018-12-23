@@ -1,0 +1,101 @@
+<div id="mtengenezi" class="application hidden" username="mtengenezi">
+
+	<div class="application-header">
+    	<img src="images/icons/icon-mtengenezi.png" class="left-side" />
+    	<b>Mtengenezi</b>
+        <button class="button red-button right-side application-closeButton" username="mtengenezi">X</button>
+        <img src="images/icons/icon-more.png" class="right-side" />
+        
+    </div>
+
+    <div class="application-body">
+
+    	<div class="application-view mtengenezi-welcome " 
+            name="mtengenezi-welcome">
+        	<div class="mtengenezi-header">
+            	<h3>Programu za Linet <button class="button darkgreen-button right-side" id="mtengenezi-makeNewApp">Tengeneza</button></h3>
+            </div>
+            <div>
+            	<p>
+                    Programu hiki chakuwezesha kutengeneza programu za Linet
+                <br />
+                Programu:
+                </p>
+                <ul id="mtengenezi-YourApplications">
+                	<li username="mtengenezi">
+                        Mtengenezi Application 
+                        <button class="button">Open</button>
+                    </li>
+                    <li username="tumanashop">
+                        Tumana Shop Application 
+                        <button class="button">Open</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="mtengenezi-editor" class="application-view mtengenezi-editor hidden" 
+            name="mtengenezi-editor" 
+            username="tumanashop">
+
+            <div class="mtengenezi-header">
+                <button action="commit" class="green-button">TAYARI</button>
+                <button action="exit" class="red-button">TOKA</button>
+                <button action="test" class="darkgreen-button">JARIBU</button>
+                
+                <b class="right-side">@tumanashop :: script.js</b>
+            </div>
+            
+            <textarea class="editor" file="script"></textarea>
+            <div class="mtengenezi-actionPane">
+                <p>
+                    <button class="button red-button" file="script">script.js</button>
+                    
+                    <button class="button green-button" file="style">style.css</button>
+                    
+                    <button class="button green-button" file="data">data.html</button>
+                </p>
+            </div>
+        </div>
+
+        <div class="application-view mtengenezi-newApp hidden" 
+            name="mtengenezi-newApp">
+            <div class="mtengenezi-header">
+                <h3>Mtengenezi application</h3>
+            </div>
+            <div class="mtengenezi-appMaker">
+                <p>
+                Kiumbe hiki chakuwezesha kutengeneza viumbe vya Lugha Yetu
+                <br />
+                Unapotengeneza kiumbe, unakubali  <a href="terms">masharti yetu</a>
+                </p>
+
+                <p>
+                    <label for="app-name">Jina: </label>
+                    <input type="text" name="app-name" placeholder="jina la kiumbe" id="mtengenezi-appName">
+                </p>
+
+                <p>
+                    <label for="app-username">Jina la mtandao: </label>
+                    <input type="text" name="app-username" placeholder="username"  id="mtengenezi-appUsername">
+                </p>
+
+                <p>
+                    <label for="app-description">Fafanua</label>
+                    <textarea rows="4" class="display-70" name="app-description" id="mtengenezi-appDescription">
+                        
+                    </textarea>
+                </p>
+
+                <p>
+                    <button class="button green-button" action="make">Tengeneza</button>
+                    <button class="button red-button" action="cancel">Toka</button>
+                </p>
+                
+                
+            </div>
+        </div>
+
+    </div>
+
+</div>

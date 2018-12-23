@@ -12,6 +12,7 @@ Route::get('/home', 'LinetController@home')->name('home');
 Route::get('/terms', 'HomeController@terms')->name('terms');
 
 Route::get('/style/{name}', 'HomeController@getstyle')->name('getstyle');
+Route::get('/system/{name}', 'HomeController@getscript');
 Route::post('/system/{name}', 'HomeController@getscript')->name('getscript');
 
 Route::post('/api/{endPoint}', 'ApiController@api')->name('api');

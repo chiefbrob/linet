@@ -1,0 +1,157 @@
+/* Ujumbe Style */
+#ujumbe {
+	
+}
+
+	#ujumbe .application-body .ujumbe-welcome {
+		font-size: 80%;
+		overflow: hidden;
+	}
+		.ujumbe-welcome .ujumbe-header {
+			overflow: hidden;
+			width: 90%;
+			float: left;
+			padding: 0.5em 2.5%;
+			margin: 0.2em 2.5%;
+			
+		}
+
+			.ujumbe-header h4 {
+				float: right;
+				width: 30%;
+				text-align: right;
+				margin: 0;
+				padding: 0;
+			}
+
+
+		.ujumbe-welcome .ujumbe-body {
+			overflow: hidden;
+			width: 90%;
+			float: left;
+			padding: 0.2em 2.5%;
+			margin: 0.1em 2.5%;
+			height: 100%;
+		}
+
+			.ujumbe-body .ujumbe-list {
+				float: left;
+				width: 15%;
+				padding: 0.5em 0%;
+				margin: 0.5em 0%;
+				height: 85%;
+				overflow-y: auto;
+				
+			}
+				.ujumbe-list .ujumbe-listItem {
+					border-radius: 5%;
+					border: 0.1em solid #FFC;
+					overflow: hidden;
+					padding: 0.2em 2.4%;
+					margin: 0.2em 2.4%;
+					cursor: default;
+				}
+
+				.ujumbe-list .ujumbe-listItem:hover {
+					
+					border: 0.1em solid black;
+				}
+
+				.ujumbe-list .activeChat {
+					border: 0.1em solid black;
+				}
+
+					.ujumbe-listItem h4 {
+						text-align: left;
+						padding: 0;
+						margin: 1em 0 0 0;
+					}
+
+			.ujumbe-body .ujumbe-preview {
+				float: left;
+				width: 82%;
+				padding: 0.5em 0%;
+				margin: 0.5em 1%;
+				height: 85%;
+				overflow: hidden;
+			}
+				.ujumbe-preview .ujumbe-previewHeader {
+					border-bottom: 0.1em solid black;
+					overflow: hidden;
+					width: 95%;
+					padding: 0.2em 2.4%;
+					margin: 0;
+				}
+					.ujumbe-previewHeader h3 {
+						padding: 0;
+						margin: 0;
+						float: left;
+					}
+
+					.ujumbe-previewHeader p {
+						padding: 0;
+						margin: 2em 0 0 0;
+						float: right;
+					}
+
+				.ujumbe-preview .ujumbe-previewBody {
+					border-bottom: 0.1em solid black;
+					height: 75%;
+					float: left;
+					width: 90%;
+					margin: 0.2em 2.4%;
+					padding: 0.2em 2.4%;
+					overflow-y: auto;
+				}
+					.ujumbe-previewBody p.ujumbe-messageIn {
+						width: 60%;
+						float: left;
+						padding: 0.2em 1%;
+						border-radius: 5%;
+						background-color: teal;
+					}
+						.ujumbe-previewBody p.ujumbe-messageIn span {
+							clear: both;
+							display: block;
+							font-weight: bold;
+						}
+					
+					.ujumbe-previewBody p.ujumbe-messageOut {
+						width: 60%;
+						float: right;
+						padding: 0.2em 1%;
+						border-radius: 5%;
+						background-color: lightblue;
+					}
+						.ujumbe-previewBody p.ujumbe-messageOut span {
+							clear: both;
+							display: block;
+							text-align: right;
+							font-weight: bold;
+						}
+				
+				.ujumbe-preview .ujumbe-previewFooter {
+					margin: 0.5em 0;
+					text-align: center;
+					bottom: 0;
+					padding: 0.2em 2.4%;
+					overflow: hidden;
+				}
+					.ujumbe-previewFooter textarea {
+						width: 60%;
+						float: left;
+					}
+
+					.ujumbe-previewFooter button {
+						float: left;
+						color: white;
+						background-color: green;
+						padding: 0.6em 0.2em;
+						border: 0.1em solid green;
+						margin: 0 0 0 1em;
+					}
+
+					.ujumbe-previewFooter button:hover {
+						color: green;
+						background-color: white;
+					}

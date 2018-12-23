@@ -1,0 +1,46 @@
+/* Tumana Shop style */
+
+#tumanashop {
+	overflow: hidden;
+}
+	#tumanashop .application-body {
+		height: 85%;
+		overflow-y: auto;
+	}
+
+		#tumanashop .application-body .tumanashop-welcome {
+			text-align: center;
+			padding: 1em 0;
+			width: 70%;
+			float: left;
+			position: relative;
+			left: 15%;
+		}
+			.tumanashop-welcome .tumanashop-banner {
+				width: 25%;
+			}
+
+			.tumanashop-welcome .tumanashop-application {
+				width: 30.3%;
+				float: left;
+				padding: 0.3em 0.5%;
+				margin: 0.5em 0.5%;
+			}
+
+			.tumanashop-application img {
+				width: 40%;
+			}
+
+
+@media only screen and (max-width: 750px) {
+	#tumanashop .application-body .tumanashop-welcome {
+		width: 90%;
+		float: left;
+		position: relative;
+		left: 5%;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	
+}

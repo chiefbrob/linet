@@ -1,0 +1,55 @@
+/* Settings style */
+
+#settings {
+	font-size: 90%;
+}
+
+	#settings .application-body .settings-welcome {
+		height: 23em;
+		overflow: hidden;
+	}
+		.settings-welcome .settings-menu {
+			width: 60%;
+			float: left;
+			padding: 0.5em 2.4%;
+			margin: 1em 2.4%;
+			height: 90%;
+			overflow: hidden;
+		}
+			.settings-menu img {
+				margin: 0.5em 5%;
+				width: 50%;
+				float: left;
+
+			}
+
+			.settings-menu .settings-menuItem {
+				width: 20%;
+				margin: 0.5em 2.4%;
+				padding: 0.5em 2.4%;
+				float: left;
+				border: 0.1em solid black;
+				font-size: 70%;
+				display: none;
+			}
+
+		.settings-welcome .settings-cpanel {
+			width: 20%;
+			float: right;
+			padding: 0.5em 2.4%;
+			margin: 1em 2.4%;
+			
+		}
+
+			.settings-cpanel .settings-cpanelSwitch {
+				float: left;
+				text-align: left;
+				width: 80%;
+				margin: 0.2	em 5%;
+				padding: 0.1em 5%;
+				overflow: hidden;
+			}
+
+				.settings-cpanelSwitch p {
+
+				}

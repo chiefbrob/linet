@@ -1,0 +1,99 @@
+/* win10 launcher */
+
+#win10-launcher {
+	position:fixed;
+	left: 0.5em;
+	bottom: 2em;
+	width: 20em;
+	padding: 0.5em 1%;
+	background-color: #0CF;
+	height: 25em;
+	border-radius: 5% 5% 0 0;
+	z-index: 498;
+}
+
+	#win10-launcher p.launcher-heading {
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+	}
+	
+	#win10-launcher div.launcher-applications {
+		height: 19em;
+		padding: 1em;
+		overflow-y: auto;
+	}
+	
+		#win10-launcher div.launcher-applications div.launcher-application {
+			overflow: hidden;
+			padding: 0.5em;
+		}
+		
+		#win10-launcher div.launcher-applications div.launcher-application:hover {
+			font-weight: bold;
+		}
+			#win10-launcher div.launcher-applications div.launcher-application img {
+				width: 2.5em;
+				float:left;
+			}
+			
+			#win10-launcher div.launcher-applications div.launcher-application span {
+				width: 2.5em;
+				float:left;
+				position: relative;
+				left: 1em;
+				top: 0.5em;
+			}
+	
+	#win10-launcher p.launcher-searchInput {
+		position: absolute;
+		bottom: 0;
+	}
+
+		#win10-launcher p.launcher-searchInput input[type=text] {
+			padding: 0.5em;
+			margin-left: 2%;
+			width: 19em;
+			border: none;
+		}
+
+
+@media only screen and (max-width: 750px) {
+	#win10-launcher {
+		left: 0.1em;
+		bottom: 2em;
+		width: 30%;
+		padding: 0.1em 1%;
+		height: 20em;
+		position: fixed;
+		overflow: hidden;
+	}
+
+		#win10-launcher div.launcher-applications {
+			height: 70%;
+			padding: 5%;
+
+			overflow-y: auto;
+		}
+
+		#win10-launcher p.launcher-searchInput {
+			position: relative;
+		}
+			#win10-launcher p.launcher-searchInput input[type=text] {
+				padding: 0.1em;
+				margin: 0.5em 2%;
+				width: 80%;
+			}
+}
+
+@media only screen and (max-width: 400px) {
+	#win10-launcher {
+		position:fixed;
+		left: 0;
+		bottom: 2em;
+		width: 100%;
+		height: 90%;
+		padding: 0;
+		border-radius: 0;
+	}
+}

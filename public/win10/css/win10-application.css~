@@ -1,0 +1,34 @@
+/* win10 application */
+.application {
+	position: fixed;
+	width: 70%;
+	left: 15%;
+	bottom: 2em;
+	border: 0.1em solid black;
+	height: 25em;
+	background-color: #FFC;
+	border-radius: 2.5%;  
+	padding: 0.5em;
+	overflow: hidden;
+}
+
+.application .application-header {
+	border-bottom: 0.1em solid black;
+	overflow: hidden;
+	height: 2em;
+}
+
+.application .application-body {
+	height: 100%;
+	overflow: auto;
+}
+
+.application .application-body .application-view {
+	height: 95%;
+}
+
+.application .application-header img {
+	width: 1.5em;
+}
+
+

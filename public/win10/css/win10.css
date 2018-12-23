@@ -1,0 +1,76 @@
+/* win10 */
+
+html, body {
+	padding:0;
+	margin:0;
+	background-color:#CCC;
+}
+
+.left-side {
+	float:left;
+}
+.right-side {
+	float: right;
+}
+
+.hidden {
+	display:none;
+}
+
+.button {
+	border: none;
+	margin: 0.1em;
+}
+
+.button-simple {
+	border: none;
+	margin: 0.1em;
+}
+
+.red-button {
+	background-color: #F00;
+	color: white;
+}
+
+.green-button {
+	background-color: #0F3;
+	color: white;
+}
+
+.darkgreen-button {
+	background-color: #090;
+	color: white;
+}
+
+.basic {
+	float: left;
+}
+
+.display-30 {
+	width: 29%;
+}
+
+.display-50 {
+	width: 49%;
+}
+
+.display-70 {
+	width: 69%;
+}
+
+.display-100 {
+	width: 99%;
+}
+
+.black {
+	color: black;
+}
+
+
+@media only screen and (max-width: 750px) {
+
+}
+
+@media only screen and (max-width: 400px) {
+	
+}

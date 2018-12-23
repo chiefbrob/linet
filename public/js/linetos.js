@@ -113,7 +113,7 @@ $().ready(function(){
 			$('#'+username).remove();		},
 		loadScript: function(name){
 
-			//console.log('LINET: loading script >> ' + name + '.js');
+			console.log('LINET: loading script >> ' + name + '.js');
 
 			$.ajax({
 				type: 'POST',

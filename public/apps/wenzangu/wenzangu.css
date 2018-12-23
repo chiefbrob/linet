@@ -1,0 +1,96 @@
+/* wezangu css */
+
+#wenzangu {
+
+}
+
+	#wenzangu .application-body .application-view {
+		padding: 0.5em 0;
+	}
+		.wenzangu-welcome .actionButton {
+			border-radius: 10%;
+			margin-right: 0.5em;
+			float: left;
+		}
+
+		.wenzangu-welcome .najuaMtu {
+			color: white;
+			background-color: green;
+			border: 0.1em solid green;
+		}
+
+		.wenzangu-welcome .najuaMtu:hover {
+			color: green;
+			background-color: white;
+		}
+
+		.wenzangu-welcome .walionitafuta {
+			color: white;
+			background-color: blue;
+			border: 0.1em solid blue;
+		}
+
+		.wenzangu-welcome .walionitafuta:hover {
+			color: blue;
+			background-color: white;
+		}
+
+		.wenzangu-welcome .niliowatafuta {
+			color: white;
+			background-color: red;
+			border: 0.1em solid red;
+		}
+
+		.wenzangu-welcome .niliowatafuta:hover {
+			color: red;
+			background-color: white;
+		}
+		.wenzangu-welcome .wenzangu-list {
+			overflow-y: auto;
+			height: 100%;
+			padding: 0 5%;
+			width: 40%;
+			float: left;
+		}
+
+			.wenzangu-list .mwenzangu {
+				margin: 0.5em 5%;
+				text-align: center;
+				width: 90%;
+				float: left;
+			}
+
+				.wenzangu-list .mwenzangu img {
+					border-radius: 50%;
+					width: 30%;
+					float: left;
+				}
+
+				.wenzangu-list .mwenzangu b {
+					margin-top: 1em;
+					display: block;
+				}
+
+		#wenzangu div .wenzangu-preview {
+			text-align: center;
+			padding: 1em 0;
+			width: 40%;
+			float: left;
+		}
+
+			.wenzangu-preview .wenzangu-previewHeader {
+				display: block;
+				overflow: hidden;
+				margin: 0.5em 0;
+			}
+
+			.wenzangu-preview .wenzangu-previewBody {
+
+			}
+				.wenzangu-previewBody img {
+					border-radius: 50%;
+				}
+
+				.wenzangu-previewBody p {
+					font-style: italic;
+				}
