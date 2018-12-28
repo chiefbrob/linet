@@ -20,6 +20,17 @@
 	<h1 class="text-center"></h1>
 	<div class="content">
 		<div class="error_content">
+			<div class="content_right agile-right text-center">
+				<!--<img src="images/linet.png" alt="" />-->
+				<h3>tafuta kwa mtandao</h3>
+				<p></p>
+				<div class="b-search w3-form">
+					<form action="https://duckduckgo.com" method="get">
+						<input type="text" name="q" Placeholder="andika hapa" required="">
+						<input type="submit" value="">
+					</form>
+				</div>
+			</div>
 			<div class="content_left w3ls">
 				<h3>Linet</h3>
 				<h4>Uh-Ah</h4>
@@ -54,17 +65,7 @@
 				</div>
 				@endguest
 			</div>
-			<div class="content_right agile-right text-center">
-				<img src="images/linet.png" alt="" />
-				<h3>tafuta kwa mtandao</h3>
-				<p></p>
-				<div class="b-search w3-form">
-					<form action="https://duckduckgo.com" method="get">
-						<input type="text" name="q" Placeholder="andika hapa" required="">
-						<input type="submit" value="">
-					</form>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 	
