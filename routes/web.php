@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('lughayetu.welcome');
 });
 
+Route::get('/privacy-policy', function () {
+    return view('lughayetu.policy');
+});
+
 Auth::routes();
 
 Route::get('/home', 'LinetController@home')->name('home');
